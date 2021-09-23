@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { GeoviCardComponent } from './geovi-card/geovi-card.component';
+import { GeoviCardDetailComponent } from './geovi-card-detail/geovi-card-detail.component';
+import { NavbarService } from 'src/assets/services/NavbarService';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { GeoviCardComponent } from './geovi-card/geovi-card.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    GeoviCardComponent
+    GeoviCardComponent,
+    GeoviCardDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,9 +31,10 @@ import { GeoviCardComponent } from './geovi-card/geovi-card.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'geovi-card-detail', component: GeoviCardDetailComponent },
     ])
   ],
-  providers: [],
+  providers: [NavbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

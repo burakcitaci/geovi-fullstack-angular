@@ -1,0 +1,92 @@
+<div class="container py-4">
+    <!-- <div style="display: block;">
+        <p (click)="backClicked()"><i class="bi bi-arrow-left" 
+            style="font-size: 3rem; color: cornflowerblue;float:left" ></i></p>
+        <h1 style="text-align: center;">{{currentFeatureModel.title}}</h1>
+    </div> -->
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="text-center" style="float: right;">
+                <img  width="250px" height="200px" src="../../assets/images/RailwayStationNode.png" />
+                <span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div>
+                <div class="d-block justify-content-between align-items-center mb-3">
+                    <h2 class="text-left">FEATURE SERVICE DETAILS</h2>
+                </div>
+                <div class="d-block justify-content-between align-items-center mb-3">    
+                    <h4 class="text-left">General information</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels">Title</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.name" readonly></div>
+                    <div class="col-md-6">
+                        <label class="labels">Current Version</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.currentVersion" readonly></div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="labels">Copyright</label>
+                        <input type="text" class="form-control"  [value]="featureJsonModel.copyrightText" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Last edit date</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.editingInfo.lastEditDate" readonly>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">Supported Export Formats</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.supportedExportFormats" readonly>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="d-block justify-content-between align-items-center mb-3">
+                    <h4 class="text-left">Geometry</h4>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="labels">Xmin</label>
+                        <input type="text" class="form-control"  [value]="featureJsonModel.extent.xmin" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Ymin</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.extent.ymin" readonly>
+                    </div>
+               </div>
+               <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="labels">Xmax</label>
+                        <input type="text" class="form-control"  [value]="featureJsonModel.extent.xmax" readonly>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels">Ymax</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.extent.ymax" readonly>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <label class="labels">WKID (Coordinate System)</label>
+                        <input type="text" class="form-control" [value]="featureJsonModel.extent.spatialReference.latestWkid" readonly>
+                    </div>
+                </div>
+
+                <div class="mt-5 text-center">
+                    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <div class="d-flex justify-content-between align-items-center experience"><span>Edit Basemap</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+   

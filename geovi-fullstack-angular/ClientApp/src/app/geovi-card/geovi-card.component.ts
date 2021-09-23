@@ -13,7 +13,7 @@ export class GeoviCardComponent implements OnInit {
 
   @Input() currentFeatureModel: FeatureModel;
 
-  @Output cardClickedEvent = new EventEmitter<FeatureModel>();
+  @Output() cardClickedEvent = new EventEmitter<FeatureModel>();
 
   constructor() { }
 
